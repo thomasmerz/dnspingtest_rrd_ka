@@ -1,6 +1,17 @@
 #!/bin/bash
 
-cd /home/thomas/Documents/Administration/dnspingtest_rrd.$(hostname)/ || exit 1
+# different dirs on different hosts:
+case $(hostname) in
+  merz-nimbus)
+    cd /home/thomas/Documents/Administration/dnspingtest_rrd.$(hostname)/ || exit 1
+    ;;
+  ubuntu-cx11-02|ubuntu-cx11-03)
+    cd ~/dev/dnspingtest_rrd.$(hostname)/ || exit 1
+    ;;
+  *)
+    exit 1
+    ;;
+esac
 
 PING=/usr/bin/dnsping
 COUNT=4
