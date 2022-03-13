@@ -19,7 +19,6 @@ DEADLINE=10
 
 dnsping_host() {
     output="$($PING -q -c $COUNT -w $DEADLINE -s "$1" nextwurz.mooo.com 2>&1)"
-    local output
     # notice $output is quoted to preserve newlines
     temp=$(echo "$output"| awk '
         BEGIN           {pl=100; rtt=0.1}
