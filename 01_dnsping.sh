@@ -74,11 +74,11 @@ for resolvers in 80.69.96.12 45.90.28.39 45.90.30.39 1.1.1.1 1.0.0.1 8.8.8.8 8.8
 # for resolvers in 192.168.42.241 192.168.0.13 45.90.28.39 45.90.30.39 1.1.1.1 1.0.0.1; do
   dnsping_host $resolvers
   /usr/bin/rrdtool update \
-      dnsping_$resolvers.rrd \
+      data/dnsping_$resolvers.rrd \
       --template \
       pl:rtt \
       N:"$RETURN_VALUE"
   # https://forum.syncthing.net/t/why-are-rrd-files-transferred-by-time-and-not-immediately/16391
-  touch dnsping_$resolvers.rrd
+  touch data/dnsping_$resolvers.rrd
 done
 
