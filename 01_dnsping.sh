@@ -51,7 +51,27 @@ dnsping_host() {
 # OpenDNS (ECS, DNSSEC);208.67.222.222;208.67.220.220;2620:119:35::35;2620:119:53::53
 # DNS.WATCH (DNSSEC);84.200.69.80;84.200.70.40;2001:1608:10:25:0:0:1c04:b12f;2001:1608:10:25:0:0:9249:d69b
 # Quad9 (filtered, ECS, DNSSEC);9.9.9.11;149.112.112.11;2620:fe::11;2620:fe::fe:11
+# --
+# https://www.privacy-handbuch.de/handbuch_93d.htm
+# "Die DNS-Server vom CCC (213.73.91.35) und Digitalcourage e.V. (85.214.20.141) empfehle ich nicht, da diese Server kein DNSSEC zur Validierung nutzen."
+# Der CCC listet "seinen" eigenen/o.g. DNS-Server selber nicht mehr auf seiner Seite: https://www.ccc.de/censorship/dns-howto/ -- Offline/Down/ABN?!
+# 46.182.19.48 (Digitalcourage)
+# 194.150.168.168 (AS250.net)
+# --
+# 5.1.66.255 Freifunk München zensurfrei, DNSSEC
+# 185.150.99.255 Freifunk München zensurfrei, DNSSEC
+# 80.241.218.68 dismail.de
+# 159.69.114.157 dismail.de
+# 176.9.93.198 dnsforge.de
+# 176.9.1.117 dnsforge.de
+# 94.140.14.14 AdGuard MIT Werbe- und Trackingfilter
+# 94.140.15.15 AdGuard MIT Werbe- und Trackingfilter
+# 94.140.14.140 AdGuard OHNE Werbe- und Trackingfilter
+# 94.140.14.141 AdGuard OHNE Werbe- und Trackingfilter
+# 95.215.19.53 Njalla  unzensiert (Njalla ist ein privacy-fokusierter, schwedischer Domain-, Hosting- und VPN-Provider)
+# --
 for resolvers in 80.69.96.12 45.90.28.39 45.90.30.39 1.1.1.1 1.0.0.1 8.8.8.8 8.8.4.4 208.67.222.222 208.67.220.220 84.200.69.80 84.200.70.40 9.9.9.11 149.112.112.11 192.168.0.1 192.168.42.241 192.168.0.13 46.182.19.48 194.150.168.168; do
+#for resolvers in 5.1.66.255 185.150.99.255 80.241.218.68 159.69.114.157 176.9.93.198 176.9.1.117 94.140.14.14 94.140.15.15 94.140.14.140 94.140.14.141 95.215.19.53; do
 # for resolvers in 192.168.42.241 192.168.0.13 45.90.28.39 45.90.30.39 1.1.1.1 1.0.0.1; do
   dnsping_host $resolvers
   /usr/bin/rrdtool update \
