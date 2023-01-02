@@ -10,6 +10,7 @@ In contrast to [https://github.com/thomasmerz/dnspingtest_rrd](https://github.co
 - [Dashboard for yesterday](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_day.html)  
 - [Dashboard for the last seven days](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_week.html)  
 - [Dashboard for the month](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_month.html)  
+- index_1.0.0.1_dnssec.html etc.
 
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
 
