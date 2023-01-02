@@ -6,7 +6,7 @@ In contrast to [https://github.com/thomasmerz/dnspingtest_rrd](https://github.co
 - Dashboards with all DNS resolvers on a hourly/daily/weekly/monthly/yearly base or  
 - all-in-one for each DNS resolver.  
 
-✨ **Or use the direct links to my dashboards:**
+✨ **Or use the direct links to my dashboards:**  
 [Dashboard for the day](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_day.html)  
 [Dashboard for the week](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_week.html)  
 [Dashboard for the month](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_month.html)  
