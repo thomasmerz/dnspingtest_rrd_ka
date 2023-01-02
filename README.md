@@ -17,3 +17,6 @@ In contrast to [https://github.com/thomasmerz/dnspingtest_rrd](https://github.co
 
 Have fun!
 
+[Dashboard for the day](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_day.html)
+[Dashboard for the week](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_week.html)
+[Dashboard for the month](dashboard_month.html)
