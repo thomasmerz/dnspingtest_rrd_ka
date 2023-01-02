@@ -6,6 +6,11 @@ In contrast to [https://github.com/thomasmerz/dnspingtest_rrd](https://github.co
 - Dashboards with all DNS resolvers on a hourly/daily/weekly/monthly/yearly base or  
 - all-in-one for each DNS resolver.  
 
+✨ **Or use the direct links to my dashboards:**
+[Dashboard for the day](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_day.html)  
+[Dashboard for the week](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_week.html)  
+[Dashboard for the month](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_month.html)  
+
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
 
 ```
@@ -16,7 +21,3 @@ In contrast to [https://github.com/thomasmerz/dnspingtest_rrd](https://github.co
 ```
 
 Have fun!
-
-[Dashboard for the day](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_day.html)
-[Dashboard for the week](https://thomasmerz.github.io/dnspingtest_rrd_ka/dashboard_week.html)
-[Dashboard for the month](dashboard_month.html)
