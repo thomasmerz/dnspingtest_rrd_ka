@@ -15,6 +15,40 @@ This project implement a nice monitoring of average response times of DNS resolv
 
 ⚠️  All data is currently updated on a daily base at 3am.
 
+These DNS resolvers are currently monitored:
+```
+# dnsping some hosts for some dns resolvers:
+# 80.69.96.12 = vodafone-extern
+# 192.168.42.241 = merz-nimbus/localhost ("LAN")
+# 192.168.0.13 = via tp-ax6000-router ("WLAN")
+# dns1.nextdns.io 45.90.28.39
+# dns2.nextdns.io 45.90.30.39
+# Google (ECS, DNSSEC);8.8.8.8;8.8.4.4;2001:4860:4860:0:0:0:0:8888;2001:4860:4860:0:0:0:0:8844
+# OpenDNS (ECS, DNSSEC);208.67.222.222;208.67.220.220;2620:119:35::35;2620:119:53::53
+# DNS.WATCH (DNSSEC);84.200.69.80;84.200.70.40;2001:1608:10:25:0:0:1c04:b12f;2001:1608:10:25:0:0:9249:d69b
+# Quad9 (filtered, ECS, DNSSEC);9.9.9.11;149.112.112.11;2620:fe::11;2620:fe::fe:11
+# --
+# https://www.privacy-handbuch.de/handbuch_93d.htm
+# "Die DNS-Server vom CCC (213.73.91.35) und Digitalcourage e.V. (85.214.20.141) empfehle ich nicht, da diese Server kein DNSSEC zur Validierung nutzen."
+# Der CCC listet "seinen" eigenen/o.g. DNS-Server selber nicht mehr auf seiner Seite: https://www.ccc.de/censorship/dns-howto/ -- Offline/Down/ABN?!
+# 46.182.19.48 (Digitalcourage)
+# 194.150.168.168 (AS250.net)
+# --
+# 5.1.66.255 Freifunk München zensurfrei, DNSSEC
+# 185.150.99.255 Freifunk München zensurfrei, DNSSEC
+# 80.241.218.68 dismail.de
+# 159.69.114.157 dismail.de
+# 176.9.93.198 dnsforge.de
+# 176.9.1.117 dnsforge.de
+# 94.140.14.14 AdGuard MIT Werbe- und Trackingfilter
+# 94.140.15.15 AdGuard MIT Werbe- und Trackingfilter
+# 94.140.14.140 AdGuard OHNE Werbe- und Trackingfilter
+# 94.140.14.141 AdGuard OHNE Werbe- und Trackingfilter
+# 95.215.19.53 Njalla  unzensiert (Njalla ist ein privacy-fokusierter, schwedischer Domain-, Hosting- und VPN-Provider)
+# 185.253.5.0 193.110.81.0 DNS0.EU
+# 193.110.81.9 185.253.5.9 DNS0.EU ZERO
+```
+
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
 
 ```

@@ -38,7 +38,7 @@ dnsping_host() {
         }
         END         {print pl ":" rtt}
         '|cut -d"=" -f2)
-    RETURN_VALUE=$temp
+    RETURN_VALUE="$temp"
 }
 
 # dnsping some hosts for some dns resolvers:
