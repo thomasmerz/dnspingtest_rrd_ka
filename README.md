@@ -32,6 +32,8 @@ These DNS resolvers are currently monitored:
 # 192.168.0.13 = via tp-ax6000-router ("WLAN")
 # dns1.nextdns.io 45.90.28.39
 # dns2.nextdns.io 45.90.30.39
+# dns1.nextdns.io 45.90.28.241 from https://my.nextdns.io/setup
+# dns2.nextdns.io 45.90.30.241 from https://my.nextdns.io/setup
 # Google (ECS, DNSSEC);8.8.8.8;8.8.4.4;2001:4860:4860:0:0:0:0:8888;2001:4860:4860:0:0:0:0:8844
 # OpenDNS (ECS, DNSSEC);208.67.222.222;208.67.220.220;2620:119:35::35;2620:119:53::53
 # DNS.WATCH (DNSSEC);84.200.69.80;84.200.70.40;2001:1608:10:25:0:0:1c04:b12f;2001:1608:10:25:0:0:9249:d69b
