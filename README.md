@@ -47,7 +47,7 @@ These DNS resolvers are currently monitored:
 # --
 # 5.1.66.255 Freifunk München zensurfrei, DNSSEC
 # 185.150.99.255 Freifunk München zensurfrei, DNSSEC
-# 116.203.32.217  dismail.de
+# 116.203.32.217 dismail.de
 # 159.69.114.157 dismail.de
 # 176.9.93.198 dnsforge.de
 # 176.9.1.117 dnsforge.de
