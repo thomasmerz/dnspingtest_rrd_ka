@@ -50,7 +50,7 @@ if [ ! -f dnsresolvers.list ]; then
   echo "dnsresolvers.list: file not found."
   exit 2
 fi
-resolverlist="$(grep -v ^\# dnsresolvers.list.tcp)"
+resolverlist="$(grep -v ^\# dnsresolvers.list)"
 [ -z "$resolverlist" ] && exit 1
 for resolver in $resolverlist; do
   if echo "$resolver"|grep -q 'T'; then
