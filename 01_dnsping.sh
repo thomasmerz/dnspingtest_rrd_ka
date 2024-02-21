@@ -17,10 +17,12 @@ esac
 PING=/usr/bin/dnsping
 COUNT=4
 DEADLINE=5
-tcp=''
+tcp=
 
 dnsping_host() {
-    output="$($PING "$tcp" -q -c $COUNT -w $DEADLINE -s "$1" nextwurz.mooo.com 2>&1)"
+    # Double quote to prevent globbing and word splitting. [SC2086]
+    # shellcheck disable=SC2086
+    output="$($PING $tcp -q -c $COUNT -w $DEADLINE -s "$1" nextwurz.mooo.com 2>&1)"
     # notice $output is quoted to preserve newlines
     temp=$(echo "$output"| awk '
         BEGIN           {pl=100; rtt=0.1}
