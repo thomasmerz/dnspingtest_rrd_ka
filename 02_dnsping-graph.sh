@@ -5,7 +5,7 @@ case $(hostname) in
   merz-nimbus)
     cd /home/thomas/Documents/Administration/dnspingtest_rrd."$(hostname)"/ || exit 1
     ;;
-  ubuntu-cx11-02|ubuntu-cx11-03|ubuntu-fsn1-1)
+  ubuntu-*)
     cd ~/dev/dnspingtest_rrd."$(hostname)"/ || exit 1
     ;;
   *)

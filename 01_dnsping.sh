@@ -5,7 +5,7 @@ case $(hostname) in
   merz-nimbus)
     cd /home/thomas/Documents/Administration/dnspingtest_rrd."$(hostname)"/ || exit 1
     ;;
-  ubuntu-cx11-02|ubuntu-cx11-03|ubuntu-fsn1-1)
+  ubuntu-*)
     cd ~/dev/dnspingtest_rrd."$(hostname)"/ || exit 1
     ;;
   *)
@@ -14,7 +14,7 @@ case $(hostname) in
     ;;
 esac
 
-PING=/usr/bin/dnsping
+PING=dnsping
 COUNT=4
 DEADLINE=5
 tcp=
@@ -61,7 +61,7 @@ for resolver in $resolverlist; do
   fi
   # create rrd-file from scratch if not existing:
   if ! [ -f data/dnsping_"${resolver}".rrd ]; then
-    /usr/bin/rrdtool create data/dnsping_"${resolver}".rrd \
+    rrdtool create data/dnsping_"${resolver}".rrd \
       --step 60 \
       DS:pl:GAUGE:600:0:100 \
       DS:rtt:GAUGE:600:0:10000000 \
@@ -77,7 +77,7 @@ for resolver in $resolverlist; do
   # do the dnsping:
   dnsping_host "$resolver"
   # and update rrd:
-  /usr/bin/rrdtool update \
+  rrdtool update \
       data/dnsping_"$resolver".rrd \
       --template \
       pl:rtt \
