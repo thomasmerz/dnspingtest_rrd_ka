@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # different dirs on different hosts:
 case $(hostname) in
