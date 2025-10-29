@@ -56,10 +56,12 @@ These DNS resolvers are currently monitored:
 # 94.140.14.140 AdGuard OHNE Werbe- und Trackingfilter
 # 94.140.14.141 AdGuard OHNE Werbe- und Trackingfilter
 # 95.215.19.53 Njalla  unzensiert (Njalla ist ein privacy-fokusierter, schwedischer Domain-, Hosting- und VPN-Provider)
-# 185.253.5.0 193.110.81.0 DNS0.EU
-# 193.110.81.9 185.253.5.9 DNS0.EU ZERO
 # 76.76.2.38 76.76.2.39 free DNS resolvers to immediately start using 1Hosts 
 # ⚠️  1Hosts switched from standard UDP to TCP on Feb, 1st, which can be checked by simply adding a "-T" directly to the server-IP
+# 185.236.104.104 and 185.236.105.105 = FlashStart Malware- und Inhaltsfilter-Testversion (Private)
+# 86.54.11.1 joindns4.eu Protective Resolution
+# 86.54.11.13 joindns4.eu Protective + Ad blocking
+# 86.54.11.100 joindns4.eu Unfiltered Resolution
 ```
 
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
