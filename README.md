@@ -62,6 +62,10 @@ These DNS resolvers are currently monitored:
 # 86.54.11.1 joindns4.eu Protective Resolution
 # 86.54.11.13 joindns4.eu Protective + Ad blocking
 # 86.54.11.100 joindns4.eu Unfiltered Resolution
+# https://dns01.eddns.eu/
+# dns01.eddns.eu: 135.181.207.105
+# dns02.eddns.de: 89.58.62.53
+# dns03.eddns.eu: 138.199.237.109
 ```
 
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
