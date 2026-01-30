@@ -16,7 +16,7 @@ esac
 
 PING=dnsping
 COUNT=4
-DEADLINE=3
+DEADLINE=2
 tcp=
 
 dnsping_host() {
