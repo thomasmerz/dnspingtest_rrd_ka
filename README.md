@@ -66,6 +66,8 @@ These DNS resolvers are currently monitored:
 # dns01.eddns.eu: 135.181.207.105
 # dns02.eddns.de: 89.58.62.53
 # dns03.eddns.eu: 138.199.237.109
+# 185.222.222.222 https://dns.sb/
+# 45.11.45.11 https://dns.sb/
 ```
 
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
