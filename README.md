@@ -13,7 +13,7 @@ This project implements a nice monitoring of average response times of DNS resol
 
 💡 Some words about **latency** from [HaGeZi DNS](https://github.com/hagezi/dns-servers/?tab=readme-ov-file#latency):
 > **DNS resolution reference values (ms):**
-> <br></br>
+> <br><br>
 > | DNS resolve / lookup time (ms) | Rating | What it usually means |
 > |---:|---|---|
 > | < 20 | Excellent | Very fast response, often due to a nearby resolver and/or a warm cache. |
