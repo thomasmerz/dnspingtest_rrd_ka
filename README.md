@@ -13,6 +13,18 @@ This project implement a nice monitoring of average response times of DNS resolv
 
 ⚠️  In contrast to [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd) this repo contains "real data" from my Linux server **at my home** (pushed nightly or on request).  
 
+Some words about **latency** from [HaGeZi DNS](https://github.com/hagezi/dns-servers/?tab=readme-ov-file#latency):
+
+> **DNS resolution reference values (ms):**
+> | DNS resolve / lookup time (ms) | Rating | What it usually means |
+> |---:|---|---|
+> | < 20 | Excellent | Very fast response, often due to a nearby resolver and/or a warm cache. |
+>| 20–50 | Very good | Common target range for good user experience. |
+>| 50–100 | OK | Usually fine, but can add noticeable delay if a page triggers many lookups. |
+>| 100–120 | Average | Often cited as the upper end of “average” DNS lookup time. |
+>| 120–200 | Slow | Suggests distance, routing/latency, resolver load, or extra resolution steps. |
+>| > 200 | Very slow / problematic | Frequently indicates a real performance or reachability issue (retries/timeouts/overload). |
+
 📈 **So all you have to do is: clone this repo and have a look on the HTML pages you are interested in:**  
 - Dashboards with all DNS resolvers on a hourly/daily/weekly/monthly/yearly base or  
 - all-in-one for each DNS resolver.  
@@ -68,6 +80,9 @@ These DNS resolvers are currently monitored:
 # dns03.eddns.eu: 138.199.237.109
 # 185.222.222.222 https://dns.sb/
 # 45.11.45.11 https://dns.sb/
+# root.hagezi.org with TLS in FSN
+# wurzn.hagezi.org with TLS in NBG
+# juuri.hagezi.org with TLS in HEL
 ```
 
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
