@@ -24,7 +24,8 @@ resolverlist="$(grep -v ^\# dnsresolvers.list)"
 [ -z "$resolverlist" ] && exit 1
 for resolver in $resolverlist; do
 
-  if echo "$resolver"|grep -q 'T'; then
+  # this works for ALL transport protocols:
+  if echo "$resolver"|grep -q '-'; then
     resolver="$(echo "$resolver"|cut -d "-" -f1)"
   fi
 
