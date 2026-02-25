@@ -16,7 +16,7 @@ esac
 
 PING=dnsping
 COUNT=4
-DEADLINE=2
+DEADLINE=1
 tcp=
 tls=
 doh=
