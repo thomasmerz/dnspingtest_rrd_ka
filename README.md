@@ -15,7 +15,9 @@ This project implements a nice monitoring of average response times of DNS resol
 
 >**DNS resolution reference values (ms):**
 >  DNS resolve / lookup time (ms) | Rating | What it usually means
+>
 > ---|---|---
+>
 >  < 20 | Excellent | Very fast response, often due to a nearby resolver and/or a warm cache.
 >  20–50 | Very good | Common target range for good user experience.
 >  50–100 | OK | Usually fine, but can add noticeable delay if a page triggers many lookups.
