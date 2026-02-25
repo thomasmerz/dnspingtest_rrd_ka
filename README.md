@@ -13,15 +13,15 @@ This project implements a nice monitoring of average response times of DNS resol
 
 💡 Some words about **latency** from [HaGeZi DNS](https://github.com/hagezi/dns-servers/?tab=readme-ov-file#latency):
 
-> **DNS resolution reference values (ms):**
-> | DNS resolve / lookup time (ms) | Rating | What it usually means |
-> |---:|---|---|
-> | < 20 | Excellent | Very fast response, often due to a nearby resolver and/or a warm cache. |
->| 20–50 | Very good | Common target range for good user experience. |
->| 50–100 | OK | Usually fine, but can add noticeable delay if a page triggers many lookups. |
->| 100–120 | Average | Often cited as the upper end of “average” DNS lookup time. |
->| 120–200 | Slow | Suggests distance, routing/latency, resolver load, or extra resolution steps. |
->| > 200 | Very slow / problematic | Frequently indicates a real performance or reachability issue (retries/timeouts/overload). |
+**DNS resolution reference values (ms):**
+| DNS resolve / lookup time (ms) | Rating | What it usually means |
+|---:|---|---|
+| < 20 | Excellent | Very fast response, often due to a nearby resolver and/or a warm cache. |
+| 20–50 | Very good | Common target range for good user experience. |
+| 50–100 | OK | Usually fine, but can add noticeable delay if a page triggers many lookups. |
+| 100–120 | Average | Often cited as the upper end of “average” DNS lookup time. |
+| 120–200 | Slow | Suggests distance, routing/latency, resolver load, or extra resolution steps. |
+| > 200 | Very slow / problematic | Frequently indicates a real performance or reachability issue (retries/timeouts/overload). |
 
 💡 Please have a look at [dnsresolvers.list](dnsresolvers.list) for all DNS resolvers that are currently monitored.
 
