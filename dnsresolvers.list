@@ -49,6 +49,7 @@
 # wurzn.hagezi.org NBG
 # juuri.hagezi.org HEL
 # --
+# dnsbunker.org use only TLS! (netcup/anexia)
 80.69.96.12
 81.210.129.4
 45.90.28.39
@@ -94,6 +95,7 @@
 138.199.237.109
 185.222.222.222
 45.11.45.11
-root.hagezi.org -X
-wurzn.hagezi.org -X
-juuri.hagezi.org -X
+root.hagezi.org-X
+wurzn.hagezi.org-X
+juuri.hagezi.org-X
+dnsbunker.org-X

@@ -83,6 +83,7 @@ These DNS resolvers are currently monitored:
 # root.hagezi.org with TLS in FSN
 # wurzn.hagezi.org with TLS in NBG
 # juuri.hagezi.org with TLS in HEL
+# dnsbunker.org with TLS (netcup)
 ```
 
 ⚠️  If you want to know what the following **scripts** are doing and how to integrate into your **crontab**, please have a look in [https://github.com/thomasmerz/dnspingtest_rrd](https://github.com/thomasmerz/dnspingtest_rrd)!
