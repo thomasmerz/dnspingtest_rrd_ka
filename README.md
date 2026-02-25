@@ -12,8 +12,8 @@
 This project implements a nice monitoring of average response times of DNS resolvers based on [dnsping](https://dnsdiag.org/) in RRD databases and simple HTML pages with PNG graphs. With these information you can decide which DNS resolver to choose for performance reasons.  
 
 💡 Some words about **latency** from [HaGeZi DNS](https://github.com/hagezi/dns-servers/?tab=readme-ov-file#latency):
-> <br><br>
 > **DNS resolution reference values (ms):**
+> <br></br>
 > | DNS resolve / lookup time (ms) | Rating | What it usually means |
 > |---:|---|---|
 > | < 20 | Excellent | Very fast response, often due to a nearby resolver and/or a warm cache. |
