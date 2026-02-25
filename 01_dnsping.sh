@@ -70,6 +70,9 @@ for resolver in $resolverlist; do
     *)
       ;;
   esac
+  # remove special transport protocols from name/IP (if present):
+  # this works for ALL transport protocols!
+  resolver="$(echo "$resolver"|cut -d "-" -f1)"
   # create rrd-file from scratch if not existing:
   if ! [ -f data/dnsping_"${resolver}".rrd ]; then
     rrdtool create data/dnsping_"${resolver}".rrd \
