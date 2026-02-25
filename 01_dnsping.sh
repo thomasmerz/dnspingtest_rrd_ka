@@ -57,7 +57,7 @@ fi
 resolverlist="$(grep -v ^\# dnsresolvers.list)"
 [ -z "$resolverlist" ] && exit 1
 for resolver in $resolverlist; do
-  case $(echo "$resolver"|grep -q '-'|tr -d "-") in
+  case $(echo "$resolver"|grep '-'|cut -d "-" -f2) in
     T)
       tcp="-T" # DOCU: Use TCP as transport protocol
       ;;
