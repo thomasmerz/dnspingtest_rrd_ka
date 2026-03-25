@@ -22,29 +22,63 @@ tls=
 doh=
 
 dnsping_host() {
-    # Double quote to prevent globbing and word splitting. [SC2086]
-    # shellcheck disable=SC2086
-    output="$($PING $tcp $tls $doh -q -c $COUNT -w $DEADLINE -s "$1" nextwurz.mooo.com 2>&1)"
-    # notice $output is quoted to preserve newlines
-    temp=$(echo "$output"| awk '
-        BEGIN           {pl=100; rtt=0.1}
-        /requests transmitted/   {
-            match($0, /([0-9]+)% lost/, matchstr)
-            pl=matchstr[1]
-        }
-        /^min/          {
-            # looking for something like "min=14.553 ms, avg=16.015 ms, max=17.675 ms, stddev=1.571 ms"
-            match($3, /avg=(.*)/, a)
-            rtt=a[1]
-        }
-        /Name or service not known/  {
-            # no output at all means network is probably down
-            pl=100
-            rtt=0.1
-        }
-        END         {print pl ":" rtt}
+    if [ "$tls" = "-X" ]; then
+        # Measuring TLS with KDIG and +keepopen
+        output=$(kdig @"$1" +tls +keepopen nextwurz.mooo.com nextwurz.mooo.com nextwurz.mooo.com nextwurz.mooo.com 2>&1)
+        
+        temp=$(echo "$output" | awk '
+            BEGIN { pl=100; rtt=0.1; sum=0; count=0; warm_queries=0 }
+            
+            /;; Query time:/ {
+                pl=0
+                count++
+                
+                # Ignore first request due to cold start (handshake)
+                if (count > 1) {
+                    sum += $4
+                    warm_queries++
+                }
+            }
+            
+            /communication severed/ || /failed/ {
+                pl=100
+                rtt=0.1
+            }
+            
+            END {
+                # Calculate "warm queries"
+                if (warm_queries > 0) {
+                    rtt = sum / warm_queries
+                    print pl ":" rtt
+                } else {
+                    print "100:0.1"
+                }
+            }
+        ')
+        RETURN_VALUE="$temp"
+    else
+        # Double quote to prevent globbing and word splitting. [SC2086]
+        # shellcheck disable=SC2086
+        output="$($PING $tcp $doh -q -c $COUNT -w $DEADLINE -s "$1" nextwurz.mooo.com 2>&1)"
+         # notice $output is quoted to preserve newlines
+        temp=$(echo "$output"| awk '
+            BEGIN           {pl=100; rtt=0.1}
+            /requests transmitted/   {
+                match($0, /([0-9]+)% lost/, matchstr)
+                pl=matchstr[1]
+            }
+            /^min/          {
+                match($3, /avg=(.*)/, a)
+                rtt=a[1]
+            }
+            /Name or service not known/ || /Timeout/ {
+                pl=100
+                rtt=0.1
+            }
+            END         {print pl ":" rtt}
         '|cut -d"=" -f2)
-    RETURN_VALUE="$temp"
+        RETURN_VALUE="$temp"
+    fi
 }
 
 # -- MAIN --
