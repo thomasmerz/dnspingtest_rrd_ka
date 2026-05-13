@@ -50,6 +50,8 @@
 # juuri.hagezi.org HEL
 # --
 # dnsbunker.org use only TLS! (netcup/anexia)
+# --
+# 81.3.27.54 recursor01.dns.ipfire.org recursor01.dns.lightningwirelabs.com
 80.69.96.12
 81.210.129.4
 45.90.28.39
@@ -99,3 +101,4 @@
 #wurzn.hagezi.org-X
 #juuri.hagezi.org-X
 #dnsbunker.org-X
+81.3.27.54
