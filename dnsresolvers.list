@@ -36,11 +36,6 @@
 # 86.54.11.13 joindns4.eu Protective + Ad blocking
 # 86.54.11.100 joindns4.eu Unfiltered Resolution
 # --
-# https://dns01.eddns.eu/ ### TODO: https://coresecret.eu/2026/01/30/in-eigener-sache-von-terminierter-infrastruktur/
-# dns01.eddns.eu: 135.181.207.105
-# dns02.eddns.de: 89.58.62.53
-# dns03.eddns.eu: 138.199.237.109
-# --
 # 185.222.222.222 https://dns.sb/
 # 45.11.45.11 https://dns.sb/
 # --
@@ -92,9 +87,6 @@
 86.54.11.1
 86.54.11.13
 86.54.11.100
-135.181.207.105
-89.58.62.53
-138.199.237.109
 185.222.222.222
 45.11.45.11
 #root.hagezi.org-X
